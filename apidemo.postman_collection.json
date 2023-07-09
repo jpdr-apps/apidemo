@@ -1,0 +1,1712 @@
+{
+	"info": {
+		"_postman_id": "646b886b-e6c8-452a-849b-9502e3a18375",
+		"name": "apidemo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8266110"
+	},
+	"item": [
+		{
+			"name": "clientes",
+			"item": [
+				{
+					"name": "1_cliente_1_post (crea)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Nombres\": \"Juan Smith\",\r\n    \"Dirección\": \"Av. San Martín 123\",\r\n    \"Edad\": 52,\r\n    \"Identificación\": \"301012012931\",\r\n    \"Género\": \"Masculino\",\r\n    \"Teléfono\": \"54112131313\",\r\n    \"Estado\": true,\r\n    \"Contraseña\": \"1234\"\r\n}"
+						},
+						"url": {
+							"raw": "http://{{servidor}}:{{puerto}}/apidemo/{{clientes}}",
+							"protocol": "http",
+							"host": [
+								"{{servidor}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"apidemo",
+								"{{clientes}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2_cliente_1_get (controlar datos)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://{{servidor}}:{{puerto}}/apidemo/{{clientes}}/1",
+							"protocol": "http",
+							"host": [
+								"{{servidor}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"apidemo",
+								"{{clientes}}",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "3_cliente_1_put (reemplaza)",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Nombres\": \"Juan Esmith\",\r\n    \"Dirección\": \"Cervantes 3021\",\r\n    \"Edad\": 32,\r\n    \"Identificación\": \"2012931111\",\r\n    \"Género\": \"Otro\",\r\n    \"Teléfono\": \"54112131311\",\r\n    \"Estado\": false,\r\n    \"Contraseña\": \"4321\"\r\n}"
+						},
+						"url": {
+							"raw": "http://{{servidor}}:{{puerto}}/apidemo/{{clientes}}/1",
+							"protocol": "http",
+							"host": [
+								"{{servidor}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"apidemo",
+								"{{clientes}}",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "4_cliente_1_get (controlar datos)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://{{servidor}}:{{puerto}}/apidemo/{{clientes}}/1",
+							"protocol": "http",
+							"host": [
+								"{{servidor}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"apidemo",
+								"{{clientes}}",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "5_cliente_2_put (crea porque no existe)",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Nombres\": \"Patricia Sosa\",\r\n    \"Dirección\": \"Bermudez 1123\",\r\n    \"Edad\": 42,\r\n    \"Identificación\": \"31422941\",\r\n    \"Género\": \"Femenino\",\r\n    \"Teléfono\": \"(223)5411293939\",\r\n    \"Estado\": true,\r\n    \"Contraseña\": \"asa_28379ñ\"\r\n}"
+						},
+						"url": {
+							"raw": "http://{{servidor}}:{{puerto}}/apidemo/{{clientes}}/2",
+							"protocol": "http",
+							"host": [
+								"{{servidor}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"apidemo",
+								"{{clientes}}",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "6_cliente_2_get (controlar datos)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://{{servidor}}:{{puerto}}/apidemo/{{clientes}}/2",
+							"protocol": "http",
+							"host": [
+								"{{servidor}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"apidemo",
+								"{{clientes}}",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "7_cliente_2_patch (cambiar algunos datos)",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Dirección\": \"Bermudez 1123\",\r\n    \"Edad\": 52,\r\n    \"Identificación\": \"3131422941\",    \r\n    \"Contraseña\": \"311313bA2\"\r\n}"
+						},
+						"url": {
+							"raw": "http://{{servidor}}:{{puerto}}/apidemo/{{clientes}}/2",
+							"protocol": "http",
+							"host": [
+								"{{servidor}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"apidemo",
+								"{{clientes}}",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "8_cliente_2_get (controlar datos)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://{{servidor}}:{{puerto}}/apidemo/{{clientes}}/2",
+							"protocol": "http",
+							"host": [
+								"{{servidor}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"apidemo",
+								"{{clientes}}",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "9_cliente_3_post (ERROR DATOS INVALIDOS)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Nombres\": \"Ignacio Gómez\",\r\n    \"Dirección\": \"Av. Córdoba 1234\",\r\n    \"Edad\": 0,\r\n    \"Identificación\": \"3010120333\",\r\n    \"Género\": \"No lo sabe\",\r\n    \"Teléfono\": \"54112131313\",\r\n    \"Estado\": true,\r\n    \"Contraseña\": \"3234\"\r\n}"
+						},
+						"url": {
+							"raw": "http://{{servidor}}:{{puerto}}/apidemo/{{clientes}}",
+							"protocol": "http",
+							"host": [
+								"{{servidor}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"apidemo",
+								"{{clientes}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "10_cliente_3_post (ERROR CAMPO FALTANTE)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Nombres\": \"Ignacio Gómez\",\r\n    \"Dirección\": \"Av. Córdoba 1234\",\r\n    \"Edad\": 21,\r\n    \"Género\": \"No lo sabe\",\r\n    \"Teléfono\": \"54112131313\",\r\n    \"Estado\": true,\r\n    \"Contraseña\": \"3234\"\r\n}"
+						},
+						"url": {
+							"raw": "http://{{servidor}}:{{puerto}}/apidemo/{{clientes}}",
+							"protocol": "http",
+							"host": [
+								"{{servidor}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"apidemo",
+								"{{clientes}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "11_cliente_3_post (crea)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Nombres\": \"Ignacio Gómez\",\r\n    \"Dirección\": \"Av. Córdoba 1234\",\r\n    \"Edad\": 31,\r\n    \"Identificación\": \"3010120333\",\r\n    \"Género\": \"Masculino\",\r\n    \"Teléfono\": \"54112131313\",\r\n    \"Estado\": true,\r\n    \"Contraseña\": \"3234\"\r\n}"
+						},
+						"url": {
+							"raw": "http://{{servidor}}:{{puerto}}/apidemo/{{clientes}}",
+							"protocol": "http",
+							"host": [
+								"{{servidor}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"apidemo",
+								"{{clientes}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "12_cliente_4_patch (ERROR NO EXISTE CLIENTE)",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Dirección\": \"Bermudez 1123\",\r\n    \"Edad\": 52,\r\n    \"Identificación\": \"3131422941\",    \r\n    \"Contraseña\": \"311313bA2\"\r\n}"
+						},
+						"url": {
+							"raw": "http://{{servidor}}:{{puerto}}/apidemo/{{clientes}}/4",
+							"protocol": "http",
+							"host": [
+								"{{servidor}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"apidemo",
+								"{{clientes}}",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "13_cliente_4_delete (ERROR NO EXISTE CLIENTE)",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://{{servidor}}:{{puerto}}/apidemo/{{clientes}}/4",
+							"protocol": "http",
+							"host": [
+								"{{servidor}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"apidemo",
+								"{{clientes}}",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "14_cliente_3_delete (elimina)",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://{{servidor}}:{{puerto}}/apidemo/{{clientes}}/3",
+							"protocol": "http",
+							"host": [
+								"{{servidor}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"apidemo",
+								"{{clientes}}",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "15_cliente_3_delete (NO EXISTE CLIENTE)",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://{{servidor}}:{{puerto}}/apidemo/{{clientes}}/3",
+							"protocol": "http",
+							"host": [
+								"{{servidor}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"apidemo",
+								"{{clientes}}",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "cuentas",
+			"item": [
+				{
+					"name": "1_cuenta_1_post (crea)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Numero Cuenta\": 123456,\r\n    \"Tipo\": \"Corriente\",\r\n    \"Saldo Inicial\": 500.01,\r\n    \"Estado\": true,\r\n    \"ID Cliente\": 1\r\n}"
+						},
+						"url": {
+							"raw": "http://{{servidor}}:{{puerto}}/apidemo/{{cuentas}}",
+							"protocol": "http",
+							"host": [
+								"{{servidor}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"apidemo",
+								"{{cuentas}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2_cuenta_1_get (controlar datos)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://{{servidor}}:{{puerto}}/apidemo/{{cuentas}}/1",
+							"protocol": "http",
+							"host": [
+								"{{servidor}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"apidemo",
+								"{{cuentas}}",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "3_cuenta_1_put (reemplaza)",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Numero Cuenta\": 123456,\r\n    \"Tipo\": \"Ahorros\",\r\n    \"Saldo Inicial\": 500.01,\r\n    \"Estado\": true,\r\n    \"ID Cliente\": 1\r\n}"
+						},
+						"url": {
+							"raw": "http://{{servidor}}:{{puerto}}/apidemo/{{cuentas}}/1",
+							"protocol": "http",
+							"host": [
+								"{{servidor}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"apidemo",
+								"{{cuentas}}",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "4_cuenta_1_get (controlar datos)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://{{servidor}}:{{puerto}}/apidemo/{{cuentas}}/1",
+							"protocol": "http",
+							"host": [
+								"{{servidor}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"apidemo",
+								"{{cuentas}}",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "5_cuenta_2_put (crea porque no existe)",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"Numero Cuenta\" : 423456,\r\n\t\"Tipo\" : \"Ahorro\",\r\n\t\"Saldo Inicial\" : 1500.33,\r\n\t\"Estado\" : false,\r\n\t\"ID Cliente\" : 1\r\n}"
+						},
+						"url": {
+							"raw": "http://{{servidor}}:{{puerto}}/apidemo/{{cuentas}}/2",
+							"protocol": "http",
+							"host": [
+								"{{servidor}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"apidemo",
+								"{{cuentas}}",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "6_cuenta_2_get (controlar datos)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://{{servidor}}:{{puerto}}/apidemo/{{cuentas}}/2",
+							"protocol": "http",
+							"host": [
+								"{{servidor}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"apidemo",
+								"{{cuentas}}",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "7_cuenta_2_patch (cambiar algunos datos)",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"Tipo\" : \"Corriente\",\t\r\n\t\"Estado\" : true\t\r\n}"
+						},
+						"url": {
+							"raw": "http://{{servidor}}:{{puerto}}/apidemo/{{cuentas}}/2",
+							"protocol": "http",
+							"host": [
+								"{{servidor}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"apidemo",
+								"{{cuentas}}",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "8_cuenta_2_get (controlar datos)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://{{servidor}}:{{puerto}}/apidemo/{{cuentas}}/2",
+							"protocol": "http",
+							"host": [
+								"{{servidor}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"apidemo",
+								"{{cuentas}}",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "9_cuenta_3_post (ERROR NUMERO DUPLICADO)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"Numero Cuenta\" : 123456,\r\n\t\"Tipo\" : \"Corriente\",\r\n\t\"Saldo Inicial\" : 500.01,\r\n\t\"Estado\" : true,\r\n\t\"ID Cliente\" : 1\r\n}"
+						},
+						"url": {
+							"raw": "http://{{servidor}}:{{puerto}}/apidemo/{{cuentas}}",
+							"protocol": "http",
+							"host": [
+								"{{servidor}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"apidemo",
+								"{{cuentas}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "10_cuenta_3_post (ERROR CAMPO FALTANTE)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"Tipo\" : \"Ahorro\",\r\n\t\"Saldo Inicial\" : 1500.33,\r\n\t\"Estado\" : false,\r\n\t\"ID Cliente\" : 1\r\n}"
+						},
+						"url": {
+							"raw": "http://{{servidor}}:{{puerto}}/apidemo/{{cuentas}}",
+							"protocol": "http",
+							"host": [
+								"{{servidor}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"apidemo",
+								"{{cuentas}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "11_cuenta_3_post (crea)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"Numero Cuenta\" : 331456,\r\n\t\"Tipo\" : \"Ahorro\",\r\n\t\"Saldo Inicial\" : 0,\r\n\t\"Estado\" : true,\r\n\t\"ID Cliente\" : 2\r\n}"
+						},
+						"url": {
+							"raw": "http://{{servidor}}:{{puerto}}/apidemo/{{cuentas}}",
+							"protocol": "http",
+							"host": [
+								"{{servidor}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"apidemo",
+								"{{cuentas}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "12_cuenta_4_patch (ERROR NO EXISTE CUENTA)",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Tipo\" : \"Ahorro\"\r\n}"
+						},
+						"url": {
+							"raw": "http://{{servidor}}:{{puerto}}/apidemo/{{cuentas}}/4",
+							"protocol": "http",
+							"host": [
+								"{{servidor}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"apidemo",
+								"{{cuentas}}",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "13_cuenta_3_patch (ERROR NUEVO CLIENTE NO EXISTE)",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \t\"ID Cliente\" : 33\r\n}"
+						},
+						"url": {
+							"raw": "http://{{servidor}}:{{puerto}}/apidemo/{{cuentas}}/3",
+							"protocol": "http",
+							"host": [
+								"{{servidor}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"apidemo",
+								"{{cuentas}}",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "14_cuenta_3_patch (ERROR SIN CAMPOS INFORMADOS)",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \t\r\n}"
+						},
+						"url": {
+							"raw": "http://{{servidor}}:{{puerto}}/apidemo/{{cuentas}}/3",
+							"protocol": "http",
+							"host": [
+								"{{servidor}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"apidemo",
+								"{{cuentas}}",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "15_cuenta_4_delete (ERROR NO EXISTE CUENTA)",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://{{servidor}}:{{puerto}}/apidemo/{{cuentas}}/4",
+							"protocol": "http",
+							"host": [
+								"{{servidor}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"apidemo",
+								"{{cuentas}}",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "16_cliente_3_delete (elimina)",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://{{servidor}}:{{puerto}}/apidemo/{{cuentas}}/3",
+							"protocol": "http",
+							"host": [
+								"{{servidor}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"apidemo",
+								"{{cuentas}}",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "17_cliente_3_delete (NO EXISTE CUENTA)",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://{{servidor}}:{{puerto}}/apidemo/{{cuentas}}/3",
+							"protocol": "http",
+							"host": [
+								"{{servidor}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"apidemo",
+								"{{cuentas}}",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "18_cuenta_3_post (crea reutiliza numero)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Numero Cuenta\": 123411,\r\n    \"Tipo\": \"Corriente\",\r\n    \"Saldo Inicial\": 0,\r\n    \"Estado\": true,\r\n    \"ID Cliente\": 2\r\n}"
+						},
+						"url": {
+							"raw": "http://{{servidor}}:{{puerto}}/apidemo/{{cuentas}}",
+							"protocol": "http",
+							"host": [
+								"{{servidor}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"apidemo",
+								"{{cuentas}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "movimientos",
+			"item": [
+				{
+					"name": "1_cuenta_1_get (controlar saldo inicial)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://{{servidor}}:{{puerto}}/apidemo/{{cuentas}}/1",
+							"protocol": "http",
+							"host": [
+								"{{servidor}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"apidemo",
+								"{{cuentas}}",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2_movimiento_1_cuenta_1_post (crea credito)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"Fecha\" :\t\"08/07/2023\",\r\n\t\"Tipo\"\t:\t\"Depósito\",\r\n\t\"Valor\"\t:\t300.01,\t\r\n\t\"ID Cuenta\"\t:\t1\r\n}"
+						},
+						"url": {
+							"raw": "http://{{servidor}}:{{puerto}}/apidemo/{{movimientos}}",
+							"protocol": "http",
+							"host": [
+								"{{servidor}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"apidemo",
+								"{{movimientos}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "3_cuenta_1_get (controlar saldo posterior)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://{{servidor}}:{{puerto}}/apidemo/{{cuentas}}/1",
+							"protocol": "http",
+							"host": [
+								"{{servidor}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"apidemo",
+								"{{cuentas}}",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "4_movimiento_2_cuenta_1_post (crea débito)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"Fecha\" :\t\"08/07/2023\",\r\n\t\"Tipo\"\t:\t\"Retiro\",\r\n\t\"Valor\"\t:\t10.09,\t\r\n\t\"ID Cuenta\"\t:\t1\r\n}"
+						},
+						"url": {
+							"raw": "http://{{servidor}}:{{puerto}}/apidemo/{{movimientos}}",
+							"protocol": "http",
+							"host": [
+								"{{servidor}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"apidemo",
+								"{{movimientos}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "5_cuenta_1_get (controlar saldo posterior)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://{{servidor}}:{{puerto}}/apidemo/{{cuentas}}/1",
+							"protocol": "http",
+							"host": [
+								"{{servidor}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"apidemo",
+								"{{cuentas}}",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "6_movimiento_3_cuenta_1_post (ERROR SALDO INSUFICIENTE)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"Fecha\" :\t\"08/07/2023\",\r\n\t\"Tipo\"\t:\t\"Retiro\",\r\n\t\"Valor\"\t:\t789.94,\t\r\n\t\"ID Cuenta\"\t:\t1\r\n}"
+						},
+						"url": {
+							"raw": "http://{{servidor}}:{{puerto}}/apidemo/{{movimientos}}",
+							"protocol": "http",
+							"host": [
+								"{{servidor}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"apidemo",
+								"{{movimientos}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "7_movimiento_3_cuenta_1_post (crea credito)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"Fecha\" :\t\"08/07/2023\",\r\n\t\"Tipo\"\t:\t\"Depósito\",\r\n\t\"Valor\"\t:\t1000.00,\t\r\n\t\"ID Cuenta\"\t:\t1\r\n}"
+						},
+						"url": {
+							"raw": "http://{{servidor}}:{{puerto}}/apidemo/{{movimientos}}",
+							"protocol": "http",
+							"host": [
+								"{{servidor}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"apidemo",
+								"{{movimientos}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "8_movimiento_3_cuenta_1_post (ERROR CUPO DIARIO ALCANZADO)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"Fecha\" :\t\"08/07/2023\",\r\n\t\"Tipo\"\t:\t\"Retiro\",\r\n\t\"Valor\"\t:\t1000.00,\t\r\n\t\"ID Cuenta\"\t:\t1\r\n}"
+						},
+						"url": {
+							"raw": "http://{{servidor}}:{{puerto}}/apidemo/{{movimientos}}",
+							"protocol": "http",
+							"host": [
+								"{{servidor}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"apidemo",
+								"{{movimientos}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "9_movimiento_4_cuenta_2_post (crea credito)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"Fecha\" :\t\"08/07/2023\",\r\n\t\"Tipo\"\t:\t\"Depósito\",\r\n\t\"Valor\"\t:\t111.11,\t\r\n\t\"ID Cuenta\"\t:\t2\r\n}"
+						},
+						"url": {
+							"raw": "http://{{servidor}}:{{puerto}}/apidemo/{{movimientos}}",
+							"protocol": "http",
+							"host": [
+								"{{servidor}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"apidemo",
+								"{{movimientos}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "10_movimiento_5_cuenta_3_post (crea credito)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"Fecha\" :\t\"08/07/2023\",\r\n\t\"Tipo\"\t:\t\"Depósito\",\r\n\t\"Valor\"\t:\t5.00,\t\r\n\t\"ID Cuenta\"\t:\t3\r\n}"
+						},
+						"url": {
+							"raw": "http://{{servidor}}:{{puerto}}/apidemo/{{movimientos}}",
+							"protocol": "http",
+							"host": [
+								"{{servidor}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"apidemo",
+								"{{movimientos}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "11_movimiento_5_cuenta_3_put (reemplaza credito)",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ID Movimiento\": 5,\r\n    \"Fecha\": \"08/07/2023\",\r\n    \"Tipo\": \"Depósito\",\r\n    \"Saldo Inicial\": 0.0,\r\n    \"Valor\": 50.0,\r\n    \"Saldo Disponible\": 50.0,\r\n    \"ID Cuenta\": 3\r\n}"
+						},
+						"url": {
+							"raw": "http://{{servidor}}:{{puerto}}/apidemo/{{movimientos}}/5",
+							"protocol": "http",
+							"host": [
+								"{{servidor}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"apidemo",
+								"{{movimientos}}",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "12_movimiento_5_cuenta_3_patch (ERROR CUENTA INEXISTENTE)",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ID Cuenta\": 10\r\n}"
+						},
+						"url": {
+							"raw": "http://{{servidor}}:{{puerto}}/apidemo/{{movimientos}}/5",
+							"protocol": "http",
+							"host": [
+								"{{servidor}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"apidemo",
+								"{{movimientos}}",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "13_movimiento_10_cuenta_3_patch (ERROR MOVIMIENTO NO EXISTE)",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ID Cuenta\": 3\r\n}"
+						},
+						"url": {
+							"raw": "http://{{servidor}}:{{puerto}}/apidemo/{{movimientos}}/10",
+							"protocol": "http",
+							"host": [
+								"{{servidor}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"apidemo",
+								"{{movimientos}}",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "14_movimiento_5_cuenta_3_patch (modificar 1 campo)",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Saldo Inicial\": 300\r\n}"
+						},
+						"url": {
+							"raw": "http://{{servidor}}:{{puerto}}/apidemo/{{movimientos}}/5",
+							"protocol": "http",
+							"host": [
+								"{{servidor}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"apidemo",
+								"{{movimientos}}",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "15_movimiento_6_cuenta_3_delete (ERROR MOVIMIENTO NO EXISTE)",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://{{servidor}}:{{puerto}}/apidemo/{{movimientos}}/6",
+							"protocol": "http",
+							"host": [
+								"{{servidor}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"apidemo",
+								"{{movimientos}}",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "16_movimiento_5_cuenta_3_delete (elimina)",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://{{servidor}}:{{puerto}}/apidemo/{{movimientos}}/5",
+							"protocol": "http",
+							"host": [
+								"{{servidor}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"apidemo",
+								"{{movimientos}}",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "17_movimiento_5_cuenta_3_delete (ERROR MOVIMIENTO INEXISTENTE)",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://{{servidor}}:{{puerto}}/apidemo/{{movimientos}}/5",
+							"protocol": "http",
+							"host": [
+								"{{servidor}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"apidemo",
+								"{{movimientos}}",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "reportes",
+			"item": [
+				{
+					"name": "1_reporte_sin_parametros (ERROR)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{servidor}}:{{puerto}}/apidemo/{{reportes}}",
+							"protocol": "http",
+							"host": [
+								"{{servidor}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"apidemo",
+								"{{reportes}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2_reporte_con_parametro_invalidos (ERROR FALTA ID CLIENTE)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{servidor}}:{{puerto}}/apidemo/{{reportes}}?fecha=11122121",
+							"protocol": "http",
+							"host": [
+								"{{servidor}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"apidemo",
+								"{{reportes}}"
+							],
+							"query": [
+								{
+									"key": "fecha",
+									"value": "11122121"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "3_reporte_con_parametro_invalidos (ERROR FORMATO FECHAS)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{servidor}}:{{puerto}}/apidemo/{{reportes}}?fecha=11122121&clienteId=1",
+							"protocol": "http",
+							"host": [
+								"{{servidor}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"apidemo",
+								"{{reportes}}"
+							],
+							"query": [
+								{
+									"key": "fecha",
+									"value": "11122121"
+								},
+								{
+									"key": "clienteId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "4_reporte_con_parametro_invalidos (ERROR FECHA INICIO MAYOR A FINAL)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{servidor}}:{{puerto}}/apidemo/{{reportes}}?fecha=10/01/2023-01/01/2023&clienteId=1",
+							"protocol": "http",
+							"host": [
+								"{{servidor}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"apidemo",
+								"{{reportes}}"
+							],
+							"query": [
+								{
+									"key": "fecha",
+									"value": "10/01/2023-01/01/2023"
+								},
+								{
+									"key": "clienteId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "5_reporte_OK (sin ocurrencias)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{servidor}}:{{puerto}}/apidemo/{{reportes}}?fecha=01/01/2023-03/01/2023&clienteId=1",
+							"protocol": "http",
+							"host": [
+								"{{servidor}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"apidemo",
+								"{{reportes}}"
+							],
+							"query": [
+								{
+									"key": "fecha",
+									"value": "01/01/2023-03/01/2023"
+								},
+								{
+									"key": "clienteId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "6_reporte_OK (con ocurrencias)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{servidor}}:{{puerto}}/apidemo/{{reportes}}?fecha=01/01/2023-31/12/2023&clienteId=1",
+							"protocol": "http",
+							"host": [
+								"{{servidor}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"apidemo",
+								"{{reportes}}"
+							],
+							"query": [
+								{
+									"key": "fecha",
+									"value": "01/01/2023-31/12/2023"
+								},
+								{
+									"key": "clienteId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "servidor",
+			"value": "localhost"
+		},
+		{
+			"key": "puerto",
+			"value": "8080"
+		},
+		{
+			"key": "clientes",
+			"value": "clientes"
+		},
+		{
+			"key": "cuentas",
+			"value": "cuentas"
+		},
+		{
+			"key": "movimientos",
+			"value": "movimientos"
+		},
+		{
+			"key": "reportes",
+			"value": "reportes"
+		}
+	]
+}
